@@ -89,7 +89,7 @@
     </footer>
   </body>
 </html>
-
+---------------------------------------------------------------------
 
 //second program Form validation
 
@@ -332,4 +332,77 @@ resultDiv.className = "result failure";
 </html>
 
 --------------------------------------------------------------------------------
-//forth question 
+//forth question  animation
+
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Simple Animation</title> 
+<style> 
+body { 
+font-family: Arial, sans-serif; 
+display: flex; 
+flex-direction: column; 
+align-items: center; 
+justify-content: center; 
+height: 100vh; 
+margin: 0; 
+background-color: #f0f0f0; 
+} 
+.box { 
+width: 50px;
+height: 50px; 
+background-color: #3498db; 
+position: relative; 
+} 
+ 
+ 
+@keyframes moveRight { 
+from { 
+transform: translateX(0); 
+} 
+to { 
+transform: translateX(300px); 
+} 
+} 
+ 
+ 
+button { 
+margin-top: 20px; 
+padding: 10px 20px; 
+font-size: 16px; 
+cursor: pointer; 
+background-color: #2ecc71; 
+color: white; 
+border: none; 
+border-radius: 5px; 
+} 
+ 
+ 
+button:hover {
+    background-color: #27ae60; 
+} 
+</style> 
+</head> 
+<body> 
+<div class="box" id="box"></div> 
+<button id="animateButton">Animate</button> 
+ 
+ 
+<script> 
+document.getElementById("animateButton").addEventListener("click", () => { 
+const box = document.getElementById("box"); 
+box.style.animation = "moveRight 2s ease-in-out"; 
+ 
+ 
+// Remove animation after it ends to allow retriggering 
+box.addEventListener("animationend", () => { 
+box.style.animation = ""; 
+}); 
+}); 
+</script> 
+</body> 
+</html>
